@@ -20,12 +20,12 @@ steps:
     displayName: 'Run tests'
 
   - script: |
-      python hello.py
+      python app.py
     displayName: 'Run application'
 
   - task: CopyFiles@2
     inputs:
-      contents: 'hello.py'
+      contents: 'app.py'
       targetFolder: '$(Build.ArtifactStagingDirectory)'
 
   - task: PublishBuildArtifacts@1
